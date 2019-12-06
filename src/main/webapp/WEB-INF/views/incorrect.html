@@ -1,0 +1,24 @@
+<html th:lang="${mvc.locale.language}" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello!</title>
+</head>
+<body>
+<h1>Number issue example</h1>
+<h2>Form</h2>
+<h3 th:text="|Locale: ${mvc.locale.language}|"></h3>
+<div>
+    <form th:action="${mvc.uri('post-incorrect')}" method="post">
+        <label for="number">Nummer eingeben</label>
+        <input id="number" name="number" type="number" step="any">
+
+        <input type="submit" value="Absenden">
+    </form>
+</div>
+<hr>
+<h2>Output</h2>
+<div>
+    Ausgabe: <span th:text="${ausgabe}"></span>
+</div>
+</body>
+</html>
